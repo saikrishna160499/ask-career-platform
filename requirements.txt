@@ -1,0 +1,8 @@
+streamlit
+google-genai
+google-search-results
+python-docx
+pypdf
+requests
+beautifulsoup4
+toml

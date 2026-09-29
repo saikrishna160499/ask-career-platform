@@ -1,0 +1,234 @@
+{
+  "basics": {
+    "name": "Sai Krishna A",
+    "email": "krishnasai.a0406@gmail.com",
+    "phone": "475-900-8989",
+    "linkedin": "https://www.linkedin.com/in/sai-krishna-a-74504b1bb/",
+    "github": ""
+  },
+  "summary": "Senior Data Engineer with over 10 years of experience, including 5+ years of specialized hands-on expertise with Azure Databricks, PySpark, and Delta Lake architectures[cite: 1]. Grounded in deep software engineering and distributed computing principles, career focus centers on designing, building, and optimizing scalable, cloud-native data platforms on Microsoft Azure tailored to highly regulated Investment Banking, Securities, and Capital Markets domains[cite: 1]. Expert in implementing and managing Unity Catalog for enterprise data governance, metadata management, auditability, and fine-grained access control across distributed lakehouse architectures[cite: 1].",
+  "certifications": [
+    "AWS – Solutions Architect Professional",
+    "Azure – Microsoft Azure Data Engineer"
+  ],
+  "skills": {
+    "azure_databricks_and_governance": [
+      "Unity Catalog",
+      "Lineage",
+      "Catalog Hierarchy",
+      "Azure Databricks Workspaces",
+      "Delta Lake",
+      "Delta Live Tables (DLT)",
+      "Auto Loader",
+      "Databricks Workflows",
+      "Cluster Memory Optimization"
+    ],
+    "cloud_ecosystem": [
+      "Azure Data Lake Storage Gen2 (ADLS Gen2)",
+      "Azure Data Factory (ADF)",
+      "Azure SQL / Synapse",
+      "Azure Key Vault",
+      "Azure Purview",
+      "AWS (S3, Redshift, Glue, Step Functions, Lambda, Athena, IAM, Secrets Manager, CloudWatch, KMS)"
+    ],
+    "languages_and_engines": [
+      "PySpark (Expert)",
+      "Apache Spark (Expert)",
+      "Advanced SQL (Expert - Execution Plans, Window Functions, CTEs)",
+      "Python (Advanced)",
+      "T-SQL",
+      "PL/SQL"
+    ],
+    "etl_and_data_modeling": [
+      "End-to-End ETL/ELT Pipeline Design",
+      "Dimensional Modeling (Kimball/Inmon)",
+      "Star/Snowflake Schemas",
+      "Medallion Architecture (Bronze/Silver/Gold)",
+      "Schema Evolution",
+      "Data Quality Testing",
+      "SCD Type 2"
+    ],
+    "devops_security_and_tools": [
+      "Git / GitHub",
+      "Azure DevOps",
+      "CI/CD Automation",
+      "RBAC",
+      "Data Masking",
+      "Power BI",
+      "SSRS",
+      "Microsoft SQL Server",
+      "Oracle Database 12c"
+    ],
+    "domains": [
+      "Investment Banking",
+      "Capital Markets & Securities Analytics",
+      "Property & Casualty Insurance",
+      "Aviation Operations",
+      "Regulated Utilities"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Cardinal Health",
+      "location": "Dublin, OH",
+      "role": "Lead/Senior Data Engineer",
+      "period": "Aug 2023 – Present",
+      "environment": [
+        "Azure Databricks",
+        "Unity Catalog",
+        "Delta Lake",
+        "PySpark",
+        "Apache Spark",
+        "Advanced SQL",
+        "Azure Data Factory (ADF)",
+        "ADLS Gen2",
+        "Azure Key Vault",
+        "Git/GitHub",
+        "Azure DevOps",
+        "Agile"
+      ],
+      "bullet_pool": [
+        "Architected and managed scalable, multi-layered lakehouse data pipelines using Azure Databricks, PySpark, and Delta Lake[cite: 1].",
+        "Implemented and configured Unity Catalog across enterprise workspaces to establish fine-grained access control (row/column-level security), centralized metadata management, and automated data lineage tracking[cite: 1].",
+        "Engineered end-to-end ETL/ELT pipeline workflows in Azure Data Factory (ADF) to ingest and land high-frequency transactional data into ADLS Gen2[cite: 1].",
+        "Utilized Advanced SQL and PySpark to develop performance-tuned Gold-layer dimensional models (Star Schemas) for business intelligence reporting[cite: 1].",
+        "Optimized Apache Spark compute cluster configurations, executor memory allocations, and Delta Lake Z-Ordering/Liquid Clustering to lower compute runtime costs by 35%[cite: 1].",
+        "Configured automated data quality validation frameworks and schema enforcement gatekeepers within Delta Live Tables (DLT) to quarantine anomalous records[cite: 1].",
+        "Led production troubleshooting, deep-dive root cause analysis (RCA), and performance tuning for mission-critical pipeline failures[cite: 1].",
+        "Automated continuous integration and deployment (CI/CD) pipelines using Git/GitHub and Azure DevOps for seamless release promotions across Dev, QA, and Prod environments[cite: 1].",
+        "Partnered cross-functionally with data architects, security teams, and business analysts to translate complex enterprise requirements into scalable technical specs[cite: 1].",
+        "Flattened complex, volatile semi-structured data formats (JSON, Parquet, Avro) into clean, relational Delta tables[cite: 1].",
+        "Enforced strict data security protocols, RBAC, and data masking using Azure Key Vault and Unity Catalog privileges[cite: 1].",
+        "Mentored junior and mid-level data engineers on PySpark optimization, SQL tuning, and Unity Catalog access rules[cite: 1].",
+        "Monitored data freshness SLAs, pipeline execution latencies, and system health metrics using custom logging and alert triggers[cite: 1].",
+        "Authored technical architecture blueprints, Unity Catalog governance guidelines, and operational runbooks[cite: 1].",
+        "Operated as an onshore lead in an Agile (Scrum) delivery structure, driving sprint planning and technical backlog refinement[cite: 1]."
+      ]
+    },
+    {
+      "company": "Freddie Mac",
+      "location": "McLean, VA",
+      "role": "Data Engineer",
+      "period": "Mar 2021 – Jul 2023",
+      "environment": [
+        "Azure Databricks",
+        "Unity Catalog",
+        "Delta Lake",
+        "PySpark",
+        "Apache Spark",
+        "Advanced SQL",
+        "Azure Data Factory (ADF)",
+        "ADLS Gen2",
+        "Capital Markets & Securities Analytics",
+        "Git",
+        "Agile"
+      ],
+      "bullet_pool": [
+        "Designed and operated enterprise-scale financial and securities data processing platforms using Azure Databricks, PySpark, and Delta Lake[cite: 1].",
+        "Configured Unity Catalog metastores and access policies to govern sensitive financial securities, borrower data, and capital market risk feeds in compliance with federal regulations[cite: 1].",
+        "Utilized Advanced SQL (CTEs, window functions, complex joins) to develop performance-tuned views and calculation engines for fixed-income security analytics[cite: 1].",
+        "Constructed batch and incremental ELT pipelines in PySpark to ingest, cleanse, and structure large-scale loan-level securities data into ADLS Gen2[cite: 1].",
+        "Integrated heterogeneous financial data feeds from legacy databases and market APIs into clean, structured, and auditable Delta Lake layers[cite: 1].",
+        "Troubleshot production pipeline exceptions, resolving structural data bugs and shuffle bottlenecks to guarantee 100% data fidelity for market-close reporting[cite: 1].",
+        "Collaborated closely with quantitative risk analysts, traders, and business users to deliver performance-tuned data products for executive dashboards[cite: 1].",
+        "Automated workflow scheduling, task dependencies, and alerting mechanisms using Azure Data Factory (ADF) and Databricks Workflows[cite: 1].",
+        "Secured sensitive capital markets records using encryption protocols, data masking, and strict identity controls[cite: 1].",
+        "Conducted deep-dive performance evaluations on Spark execution plans, adjusting partition keys and memory limits to minimize compute costs[cite: 1].",
+        "Maintained version control hygiene and environment portability using Git branching strategies[cite: 1].",
+        "Enforced metadata tracking, data lineage, and audit classification standards required by regulatory bodies[cite: 1].",
+        "Reviewed completed technical deliverables with business stakeholders to verify compliance with capital market risk guidelines[cite: 1].",
+        "Mentored peer engineers on PySpark memory management, Delta Lake Time Travel capabilities, and Spark SQL tuning[cite: 1].",
+        "Thrived in a fast-paced Agile delivery environment, actively participating in daily stand-ups, backlog grooming, and sprint retrospectives[cite: 1]."
+      ]
+    },
+    {
+      "company": "Goodville Mutual Casualty",
+      "location": "New Holland, PA",
+      "role": "Data Engineer",
+      "period": "Oct 2019 – Feb 2021",
+      "environment": [
+        "AWS (S3, Redshift, Glue, Step Functions, Lambda, Athena, IAM, Secrets Manager, CloudWatch, KMS)",
+        "PySpark",
+        "Python",
+        "Advanced SQL",
+        "Data Modeling (Kimball)",
+        "Git",
+        "Agile",
+        "Property & Casualty Insurance Domain"
+      ],
+      "bullet_pool": [
+        "Architected and optimized scalable cloud data pipelines on AWS to consolidate property, casualty, policy, underwriting, and claims datasets into a centralized data lakehouse[cite: 1].",
+        "Developed high-throughput batch and event-driven data ingestion modules using AWS Glue and PySpark to process structured and semi-structured insurance files[cite: 1].",
+        "Ingested raw operational logs and daily claims feeds directly into Amazon S3 landing buckets, configuring partition keys and S3 Lifecycle policies to optimize storage costs[cite: 1].",
+        "Demonstrated Advanced SQL expertise by writing and performance-tuning complex actuarial scripts in Amazon Redshift, eliminating processing bottlenecks during peak reporting windows[cite: 1].",
+        "Constructed serverless workflow orchestration DAGs using AWS Step Functions to automate multi-stage ETL/ELT job execution and dependency management[cite: 1].",
+        "Created robust logical and physical dimensional data models (Kimball star schemas) in Amazon Redshift to track policy renewals, premium metrics, and loss ratios[cite: 1].",
+        "Implemented automated data quality checks, schema validation gatekeepers, and null-checking routines using AWS Lambda and Python across the claims pipeline[cite: 1].",
+        "Applied core data warehousing concepts to orchestrate and maintain Slowly Changing Dimensions (SCD Type 2) for tracking policyholder coverage modifications over time[cite: 1].",
+        "Enabled ad-hoc analytics for actuaries and risk analysts by deploying serverless query capabilities via Amazon Athena over partitioned S3 Parquet datasets[cite: 1].",
+        "Partnered closely with data architects, actuaries, and claims managers to translate complex loss-ratio business logic into scalable physical database views[cite: 1].",
+        "Enforced strict enterprise data governance, automated schema discovery, and central metadata tracking using the AWS Glue Data Catalog[cite: 1].",
+        "Secured sensitive policyholder PII boundaries by enforcing fine-grained AWS IAM role policies, KMS key encryption at rest/in transit, and AWS Secrets Manager[cite: 1].",
+        "Configured real-time pipeline execution tracking, error logging, and automated notification triggers using Amazon CloudWatch and SNS to guarantee strict SLA adherence[cite: 1].",
+        "Maintained version-controlled code repositories, branch protection rules, and deployment templates using Git and AWS CodePipeline workflows[cite: 1].",
+        "Operated with a proactive delivery mindset within an Agile (Scrum) framework, tracking user stories and managing pipeline deliverables across fast-paced sprint cycles[cite: 1]."
+      ]
+    },
+    {
+      "company": "Spirit Airlines",
+      "location": "Miramar, FL",
+      "role": "SQL Developer/Administrator",
+      "period": "Jan 2017 – Sep 2019",
+      "environment": [
+        "Microsoft SQL Server (SSMS)",
+        "Oracle Database 12c",
+        "SSRS",
+        "Power BI Desktop/Service",
+        "Microsoft Excel (VBA)",
+        "Python",
+        "T-SQL",
+        "PL/SQL",
+        "Near Real-time flight tracking feeds"
+      ],
+      "bullet_pool": [
+        "Engineered and maintained a comprehensive suite of Power BI dashboards to monitor real-time flight performance and ground handling efficiency, providing the 24/7 operations center with critical visibility into aviation metrics[cite: 1].",
+        "Executed complex SQL analytics against SQL Server and Oracle databases to evaluate historical route profitability, directly informing flight schedules and fuel consumption strategies[cite: 1].",
+        "Developed Python scripts to automate the aggregation of fuel consumption data from disparate sources, identifying cost-saving opportunities through aircraft weight management and flight path optimization[cite: 1].",
+        "Provided rapid-response ad-hoc analysis during major operational disruptions like extreme weather events, empowering leadership with data-driven decisions on crew reassignments and flight cancellations[cite: 1].",
+        "Modernized monthly financial reporting by building automated Excel models using VBA and Power Query, cutting manual data entry time by 50% while improving reporting accuracy[cite: 1].",
+        "Partnered with maintenance to analyze aircraft component failure rates using SQL, identifying recurring patterns that informed preventative maintenance schedules and reduced unscheduled downtime[cite: 1].",
+        "Conducted deep-dive customer satisfaction analysis by merging survey data with operational flight logs, linking flight delays with Net Promoter Scores (NPS)[cite: 1].",
+        "Optimized mission-critical SQL Server stored procedures used for daily crew scheduling to ensure operations had accurate staffing data at the start of every shift[cite: 1].",
+        "Validated the integrity of external aviation authority data feeds to ensure internal reporting complied strictly with FAA standards and safety regulations[cite: 1].",
+        "Supported the integration of a new revenue management system by performing detailed data mapping and testing with Oracle databases and historical pricing data[cite: 1]."
+      ]
+    },
+    {
+      "company": "Avangrid",
+      "location": "Orange, CT",
+      "role": "Database Administrator",
+      "period": "Oct 2014 – Dec 2016",
+      "environment": [
+        "Oracle Database",
+        "MS Access",
+        "Flat File Processing (CSV, XML)",
+        "Microsoft Excel (VLOOKUP, Power Pivot)",
+        "SQL",
+        "VBA",
+        "SharePoint Document Management"
+      ],
+      "bullet_pool": [
+        "Supported billing and regulatory departments by performing high-precision data extracts from Oracle databases to ensure invoicing remained accurate and compliant with state utility laws[cite: 1].",
+        "Designed and managed centralized MS Access databases to track complex regulatory filings and audit requests for sensitive legal documentation[cite: 1].",
+        "Led data validation and cleansing initiatives on large-scale utility consumption datasets using SQL and Excel, proactively resolving discrepancies before financial reporting[cite: 1].",
+        "Streamlined external audit preparation by generating detailed reports documenting billing accuracy and adherence to financial controls[cite: 1].",
+        "Developed automated reporting templates in Excel using advanced formulas and PivotTables to track monthly energy delivery metrics and regional demand forecasts[cite: 1].",
+        "Collaborated with IT to troubleshoot data quality issues within the Oracle ERP system while driving UAT for system patches to ensure zero service interruptions[cite: 1].",
+        "Performed deep-dive trend analysis on historical billing data to identify seasonal fluctuations in energy usage, improving budgeting and forecasting accuracy[cite: 1].",
+        "Standardized knowledge transfer by authoring standard operating procedures (SOPs) for recurring data tasks and database maintenance[cite: 1].",
+        "Managed rapid-response ad-hoc data requests from legal regarding historical customer accounts for high-priority regulatory inquiries[cite: 1].",
+        "Improved data collection efficiency from regional field offices by designing standardized Excel input forms that reduced manual data entry errors[cite: 1]."
+      ]
+    }
+  ]
+}
