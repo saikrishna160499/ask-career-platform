@@ -55,13 +55,23 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------------
-# Dynamic Secrets & Environment Resolver
+# Dynamic Secrets & Environment Resolver (Crash-Proof)
 # ---------------------------------------------------------
 def get_secret(key_name: str, default: str = "") -> str:
-    """Retrieves secret keys from Streamlit secrets or OS environment variables."""
-    if hasattr(st, "secrets") and key_name in st.secrets:
-        return st.secrets[key_name]
-    return os.environ.get(key_name, default)
+    """Safely retrieves keys from OS environment (Render) or st.secrets (Local/Streamlit)."""
+    # 1. First check system environment variables (Native to Render, Docker, etc.)
+    val = os.environ.get(key_name)
+    if val:
+        return val
+
+    # 2. Fall back to st.secrets inside try-except to avoid StreamlitSecretNotFoundError
+    try:
+        if key_name in st.secrets:
+            return st.secrets[key_name]
+    except Exception:
+        pass
+
+    return default
 
 GEMINI_API_KEY = get_secret("GEMINI_API_KEY")
 SERPAPI_KEY = get_secret("SERPAPI_KEY")
@@ -89,7 +99,6 @@ def fetch_board_specific_jobs(role: str, location: str, board: str, job_type: st
     if not SERPAPI_KEY:
         return []
     
-    # Construct search operators tailored per platform
     domain_map = {
         "LinkedIn": "linkedin.com/jobs",
         "Dice": "dice.com",
@@ -131,14 +140,12 @@ def fetch_board_specific_jobs(role: str, location: str, board: str, job_type: st
         if response.status_code == 200:
             data = response.json()
             for item in data.get("jobs_results", []):
-                # Detect direct application link
                 apply_link = ""
                 for opt in item.get("apply_options", []):
                     if opt.get("link"):
                         apply_link = opt.get("link")
                         break
                 
-                # Detect or infer employment label
                 detected_type = "Full-Time"
                 desc_lower = (item.get("description", "") + " " + item.get("title", "")).lower()
                 if any(k in desc_lower for k in ["contract", "c2c", "corp to corp", "1099", "temp"]):
@@ -161,7 +168,7 @@ def fetch_board_specific_jobs(role: str, location: str, board: str, job_type: st
     return board_results
 
 def fetch_all_multiboard_jobs(role: str, location: str, job_type: str) -> list:
-    """Executes parallel threads across all 9 target boards."""
+    """Executes parallel threads across all target boards."""
     aggregated = []
     with ThreadPoolExecutor(max_workers=9) as executor:
         futures = {
@@ -176,7 +183,6 @@ def fetch_all_multiboard_jobs(role: str, location: str, job_type: str) -> list:
             except Exception:
                 continue
 
-    # Deduplicate entries by unique (Title + Company) key
     seen = set()
     deduped = []
     for j in aggregated:
@@ -204,7 +210,6 @@ def generate_formatted_docx(resume_text: str) -> io.BytesIO:
     """Builds a clean, professional ATS-standard DOCX document."""
     doc = Document()
     
-    # 0.5-inch compact professional margins
     for section in doc.sections:
         section.top_margin = Inches(0.5)
         section.bottom_margin = Inches(0.5)
@@ -217,7 +222,6 @@ def generate_formatted_docx(resume_text: str) -> io.BytesIO:
         if not line:
             continue
             
-        # Section Header Detection
         if line.startswith("# ") or (line.isupper() and len(line) < 35):
             h_text = line.replace("# ", "").strip()
             p = doc.add_paragraph()
@@ -271,7 +275,7 @@ with st.sidebar:
 # ---------------------------------------------------------
 if active_tab == "💼 Live Multi-Board Search":
     st.header("💼 Live Multi-Board Market Search")
-    st.write("Concurrently scrape and query full-time, contract, and remote listings across all primary job portals.")
+    st.write("Scrape and aggregate full-time, contract, and remote listings across all primary job portals.")
 
     c1, c2, c3 = st.columns([3, 2, 2])
     with c1:
@@ -295,7 +299,6 @@ if active_tab == "💼 Live Multi-Board Search":
         jobs = st.session_state["portal_jobs"]
         st.success(f"Successfully aggregated **{len(jobs)} unique positions**.")
 
-        # Metric Distribution Bar
         st.subheader("Platform Distribution Breakdown")
         dist_cols = st.columns(len(TARGET_BOARDS))
         counts = {b: 0 for b in TARGET_BOARDS}
@@ -308,7 +311,6 @@ if active_tab == "💼 Live Multi-Board Search":
 
         st.divider()
 
-        # Dynamic Filtering Bar
         fcol1, fcol2 = st.columns([2, 2])
         with fcol1:
             selected_board = st.selectbox("Filter Display by Portal", ["All Portals"] + TARGET_BOARDS)
